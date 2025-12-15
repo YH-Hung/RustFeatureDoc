@@ -3,11 +3,20 @@ name = "rust-grpc"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "routeguide-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "routeguide-client"
+path = "src/client.rs"
+
 [dependencies]
 tonic = "*"
 prost = "0.14"
 tokio = { version = "1.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
 tokio-stream = "0.1"
+tonic-prost = "0.14"
 
 async-stream = "0.2"
 serde = { version = "1.0", features = ["derive"] }
