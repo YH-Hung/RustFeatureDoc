@@ -3,6 +3,10 @@ name = "rust-grpc"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "rust_grpc"
+path = "src/lib.rs"
+
 [[bin]]
 name = "routeguide-server"
 path = "src/server.rs"

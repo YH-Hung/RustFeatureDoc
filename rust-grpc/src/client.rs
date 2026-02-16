@@ -1,16 +1,13 @@
-pub mod routeguide {
-    tonic::include_proto!("routeguide");
-}
-
 use std::error::Error;
 use std::time::Duration;
-use tonic::Request;
-use tonic::transport::Channel;
-use tokio::time;
+
 use rand::Rng;
 use rand::rngs::ThreadRng;
-use routeguide::route_guide_client::RouteGuideClient;
-use routeguide::{Point, Rectangle, RouteNote};
+use tokio::time;
+use tonic::Request;
+use tonic::transport::Channel;
+
+use rust_grpc::route_guide::{RouteGuideClient, Point, Rectangle, RouteNote};
 
 fn random_point(rng: &mut ThreadRng) -> Point {
     let latitude = (rng.gen_range(0..180) - 90) * 10_000_000;
