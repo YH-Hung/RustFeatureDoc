@@ -13,7 +13,11 @@ path = "src/server.rs"
 
 [[bin]]
 name = "routeguide-client"
-path = "src/client.rs"
+path = "src/route_client.rs"
+
+[[bin]]
+name = "helloworld-client"
+path = "src/hello_world_client.rs"
 
 [dependencies]
 tonic = "*"
