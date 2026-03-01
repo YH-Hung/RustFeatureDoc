@@ -19,6 +19,10 @@ path = "src/route_client.rs"
 name = "helloworld-client"
 path = "src/hello_world_client.rs"
 
+[[bin]]
+name = "hellogirl-client"
+path = "src/hello_girl_client.rs"
+
 [dependencies]
 tonic = "*"
 prost = "0.14"
